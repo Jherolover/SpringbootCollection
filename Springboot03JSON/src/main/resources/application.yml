@@ -1,0 +1,8 @@
+server:
+  port: 8889
+
+
+#配置自定义属性
+springbootproperties:
+   author: elite
+   name: springbootdemo
