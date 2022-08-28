@@ -1,4 +1,4 @@
-package com.elite.springboot.common;
+package com.elite.springboot.codegene;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;

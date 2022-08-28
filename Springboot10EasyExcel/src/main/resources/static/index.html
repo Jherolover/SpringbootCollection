@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>excel上传下载管理</title>
+</head>
+<!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
+<!--引入静态的路径-->
+<script type="text/javascript" src="js/vue.min.js"></script>
+<!--script src="https://unpkg.com/element-ui/lib/index.js"></script-->
+<script type="text/javascript" src="js/index.js"></script>
+<!-- 引入样式 -->
+<!--link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"-->
+<link rel="stylesheet" href="css/index.css">
+<!-- 引入组件库 -->
+<!--引入通信框架-->
+<!--script src="https://unpkg.com/axios/dist/axios.min.js"></script-->
+<script type="text/javascript" src="js/axios.min.js"></script>
+<body>
+<div id="app">
+    <h1 style="background-color: #409EFF;text-align: center;">EasyExcel上传下载管理</h1>
+    <div>
+        <el-form :inline="true"  class="demo-form-inline" label-position="center" >
+            <el-form-item>
+                <el-button type="primary" icon="el-icon-download" @click="downloadTemplate">下载excel模板</el-button>
+                <el-button type="primary" icon="el-icon-upload2" @click="importData">上传excel</el-button>
+            </el-form-item>
+        </el-form>
+
+        <!---导入弹框-->
+        <el-dialog title="上传Excel:上传前先下载模板进行格式调整" :visible.sync="dialogImportVisible" width="480px">
+            <!--选择框-->
+            <el-form label-position="center" label-width="170px">
+                <el-form-item label="文件">
+                    <el-upload
+                            :multiple="false"
+                            :on-success="onUploadSuccess"
+                            :action="'http://localhost:8017/uploadExcel'"
+                            class="upload-demo">
+                        <el-button size="small" type="primary">点击上传</el-button>
+                        <div slot="tip" class="el-upload__tip">只能上传xls文件，且不超过500kb</div>
+                    </el-upload>
+                </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer" style="text-align: center">
+                <el-button type="info" @click="dialogImportVisible = false">取消</el-button>
+            </div>
+        </el-dialog>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    new Vue({
+        el: "#app",
+        //数据
+        data() {
+            return {
+                dialogImportVisible:false //导入上传文本框
+            }
+        },
+        //创建之前
+        created() {
+
+        },
+        //初始化加载数据
+        mounted() {
+
+        },
+        methods: {
+            //导入数据
+            importData(){
+                this.dialogImportVisible = true
+            },
+            //下载模板
+            downloadTemplate(){
+                window.open("http://localhost:8017/downLoadExcelTemplate")
+            },
+            //加载成功
+            onUploadSuccess(response, file) {
+                this.$message.info('上传成功')
+                this.dialogImportVisible = false
+            }
+        }
+
+    });
+</script>
+<style scoped>
+
+</style>

@@ -1,5 +1,8 @@
 package com.elite.springboot.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,8 +16,11 @@ import java.sql.Date;
 @Data
 @Getter
 @Setter
+//注意表明的大小写
+@TableName("`order`")
 public class Order {
     //订单ID
+    @TableId(value = "order_id",type = IdType.AUTO)
     private Integer order_id;
     //订单号
     private Integer order_no;

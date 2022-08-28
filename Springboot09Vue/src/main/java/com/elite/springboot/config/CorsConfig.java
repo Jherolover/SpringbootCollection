@@ -1,4 +1,4 @@
-package com.elite.nsiservice.config;
+package com.elite.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

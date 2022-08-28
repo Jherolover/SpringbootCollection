@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/SpringbootHelloWord/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot02Configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot01HelloWord/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot02JSON/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot03JSON/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot05DataAccessJPA/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot06DataAccessMybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot08Swagger/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot09Vue/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot10EasyExcel/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SwUserDefinedSpecifications">
+    <option name="specTypeByUrl">
+      <map />
+    </option>
   </component>
 </project>

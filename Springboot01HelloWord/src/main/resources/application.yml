@@ -1,2 +1,7 @@
+#配置端口
 server:
   port: 8888
+#配置应用名字
+spring:
+  application:
+    name: helloword

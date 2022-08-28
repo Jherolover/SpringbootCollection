@@ -1,4 +1,4 @@
-package com.elite.hospital.config;
+package com.elite.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class Swagger2Config {
     @Bean
     public Docket webApiConfig(){
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("hospital")
+                .groupName("SpringbootMybatisPlus")
                 .apiInfo(webApiInfo())
                 .select()
                 //只显示api路径下的页面
@@ -25,10 +25,10 @@ public class Swagger2Config {
 
     private ApiInfo webApiInfo(){
         return new ApiInfoBuilder()
-                .title("网站-API文档")
-                .description("本文档描述了网站接口定义")
+                .title("Springboot-API文档")
+                .description("描述接口定义")
                 .version("1.0")
-                .contact(new Contact("hospital", "http://elite.com", "elite.com"))
+                .contact(new Contact("SpringbootMybatisPlus", "http://elite.com", "elite.com"))
                 .build();
     }
 }

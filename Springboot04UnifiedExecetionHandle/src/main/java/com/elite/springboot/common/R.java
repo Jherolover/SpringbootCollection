@@ -1,4 +1,4 @@
-package com.elite.springboot.Common;
+package com.elite.springboot.common;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

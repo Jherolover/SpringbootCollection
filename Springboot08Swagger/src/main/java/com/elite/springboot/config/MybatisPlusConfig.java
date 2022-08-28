@@ -1,4 +1,4 @@
-package springboot.config;
+package com.elite.springboot.config;
 
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

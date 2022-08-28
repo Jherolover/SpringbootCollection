@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/SpringbootHelloWord/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringbootHelloWord/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot01HelloWord/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot01HelloWord/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot02Configuration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot03JSON/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot03JSON/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot08Swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot08Swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot09Vue/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot09Vue/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot10EasyExcel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../../devsoftware/apache-maven-3.8.2/locallib/org/springframework/boot/spring-boot-starter-parent/2.3.6.RELEASE/src/main/resources" charset="UTF-8" />
   </component>
 </project>

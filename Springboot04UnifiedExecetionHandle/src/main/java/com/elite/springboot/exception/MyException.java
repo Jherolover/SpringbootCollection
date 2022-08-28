@@ -1,4 +1,4 @@
-package com.elite.springboot.controller;
+package com.elite.springboot.exception;
 
 public class MyException extends RuntimeException{
 

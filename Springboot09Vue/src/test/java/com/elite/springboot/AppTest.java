@@ -1,4 +1,4 @@
-package org.example;
+package com.elite.springboot;
 
 import static org.junit.Assert.assertTrue;
 

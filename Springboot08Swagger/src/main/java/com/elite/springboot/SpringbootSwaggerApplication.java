@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.elite.springboot.mapper")
-public class SpringbootMybatisPlusApp
+public class SpringbootSwaggerApplication
 {
     public static void main( String[] args ) {
-        SpringApplication.run(SpringbootMybatisPlusApp.class,args);
+        SpringApplication.run(SpringbootSwaggerApplication.class,args);
     }
 }

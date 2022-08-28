@@ -1,4 +1,4 @@
-package com.elite.hospital.common;
+package com.elite.springboot.common;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,6 +13,6 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R error(Exception e){
         e.printStackTrace();
-        return R.fail(400L,"执行了全局异常处理");
+        return R.fail(400,"执行了全局异常处理");
     }
 }

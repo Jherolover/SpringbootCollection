@@ -1,0 +1,16 @@
+server:
+  port: 8812
+spring:
+  application:
+    name: SpringbootJPA
+  #配置数据库
+  datasource:
+    url: jdbc:mysql://192.168.5.130:3306/test
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update #更新或者创建数据表结构
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true  #控制台显示SQL

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elite.springboot.mapper.OrderMapper">
+
+    <!--查询订单-->
+    <select id="getOneOrder" parameterType="Integer" resultType="com.elite.springboot.entity.Order">
+        SELECT order_id,
+               order_no,
+               product_id,
+               user_id,
+               order_num,
+               order_amt,
+               order_status,
+               pay_status,
+               create_time,
+               update_time,
+               create_user,
+               update_user
+        from `order` where order_id=#{order_id};
+    </select>
+    <!--查询订单列表-->
+    <select id="getAllOrder" resultType="com.elite.springboot.entity.Order" >
+        SELECT order_id,
+               order_no,
+               product_id,
+               user_id,
+               order_num,
+               order_amt,
+               order_status,
+               pay_status,
+               create_time,
+               update_time,
+               create_user,
+               update_user
+        from `order`
+    </select>
+    <!--更新订单-->
+    <update id="updateOrder" parameterType="com.elite.springboot.entity.Order">
+       update `order`
+        <set>
+            <if test="order_no != null and order_no != ''">order_no = #{order_no},</if>
+            <if test="product_id != null and product_id != ''">product_id = #{product_id},</if>
+            <if test="user_id != null and user_id != ''">user_id = #{user_id},</if>
+            <if test="order_num != null and order_num != ''">order_num = #{order_num},</if>
+            <if test="order_amt != null and order_amt != ''">order_amt = #{order_amt},</if>
+            <if test="order_status != null">order_status = #{order_status},</if>
+            <if test="pay_status != null">pay_status = #{pay_status},</if>
+            <if test="create_user != null and create_user != ''">create_user = #{create_user},</if>
+            <if test="update_user != null and update_user != ''">update_user = #{update_user},</if>
+            update_time =CURRENT_TIMESTAMP
+        </set>
+        where order_id = #{order_id}
+    </update>
+    <!--删除订单-->
+    <delete id="delOrder" parameterType="Integer">
+        DELETE FROM `order`
+        WHERE order_id= #{order_id};
+    </delete>
+    <!--保存订单数据-->
+    <insert id="saveOrder" parameterType="com.elite.springboot.entity.Order">
+        INSERT INTO `order`(`order_no`,
+         `product_id`,
+         `user_id`,
+         `order_num`,
+         `order_amt`,
+         `order_status`,
+         `pay_status`,
+         `create_user`,
+         `update_user`)
+        VALUES( #{order_no},
+                #{product_id},
+                #{user_id},
+                #{order_num},
+                #{order_amt},
+                #{order_status},
+                #{pay_status},
+                #{create_user},
+                #{update_user})
+    </insert>
+</mapper>

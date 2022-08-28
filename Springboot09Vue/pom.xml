@@ -10,10 +10,10 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>org.example</groupId>
-  <artifactId>Springboot08Swagger</artifactId>
+  <artifactId>Springboot09Vue</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>Springboot08Swagger</name>
+  <name>Springboot09Vue</name>
   <properties>
     <java.version>1.8</java.version>
   </properties>
@@ -21,6 +21,11 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.1</version>
     </dependency>
     <!--mybatis-plus-->
     <dependency>
@@ -89,7 +94,21 @@
     <resources>
       <resource>
         <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <excludes>
+          <exclude>static/**/*.woff</exclude>
+          <exclude>static/**/*.woff2</exclude>
+          <exclude>static/**/*.ttf</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
         <includes>
+          <include>static/**/*.woff</include>
+          <include>static/**/*.woff2</include>
+          <include>static/**/*.ttf</include>
+          <include>static/**/*.html</include>
+          <include>static/**/*.js</include>
           <include>**/*.properties</include>
           <include>**/*.xml</include>
           <include>**/*.yml</include>

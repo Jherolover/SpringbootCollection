@@ -2,348 +2,323 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>医保下载目录管理</title>
+    <title>字典管理</title>
 </head>
 <!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
 <!--引入静态的路径-->
-<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
 <!--script src="https://unpkg.com/element-ui/lib/index.js"></script-->
 <script type="text/javascript" src="js/index.js"></script>
 <!-- 引入样式 -->
 <!--link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"-->
 <link rel="stylesheet" href="css/index.css">
 <!-- 引入组件库 -->
-
 <!--引入通信框架-->
 <!--script src="https://unpkg.com/axios/dist/axios.min.js"></script-->
 <script type="text/javascript" src="js/axios.min.js"></script>
 <body>
 <div id="app">
-    <h1 style="background-color: #409EFF;text-align: center;">医保下载目录管理</h1>
-
-    <el-form :model="formData" ref="formData" :inline="true" :rules="rules" size="medium" label-width="100px">
-
-        <el-form-item label="国家机构码" prop="nsiorgcode">
-            <el-input v-model="formData.nsiorgcode" placeholder="输入国家机构码" clearable
-                      :style="{width: '100%'}"></el-input>
-        </el-form-item>
-        <el-form-item label="国家机构名" prop="nsiorgname">
-            <el-input v-model="formData.nsiorgname" placeholder="输入国家机构名" clearable
-                      :style="{width: '100%'}"></el-input>
-        </el-form-item>
-        <el-form-item label="请求地址" prop="servrurl">
-            <el-input v-model="formData.servrurl" placeholder="输入医保请求地址" clearable :style="{width: '100%'}">
-            </el-input>
-        </el-form-item>
-        <el-form-item label="授权码" prop="infosyscode">
-            <el-input v-model="formData.infosyscode" placeholder="输入授权码" clearable :style="{width: '100%'}">
-            </el-input>
-        </el-form-item>
-
-        <el-form-item label="授权识别码" prop="infosyssign">
-            <el-input v-model="formData.infosyssign" placeholder="输入授权识别码" clearable :style="{width: '100%'}">
-            </el-input>
-        </el-form-item>
-        <el-form-item label="统筹区码" prop="mdtrtarea_admvs">
-            <el-input v-model="formData.mdtrtarea_admvs" placeholder="请输入统筹区码" clearable
-                      :style="{width: '100%'}"></el-input>
-        </el-form-item>
-        <el-form-item label="操作员编码" prop="opercode">
-            <el-input v-model="formData.opercode" placeholder="请输入操作员编码" clearable
-                      :style="{width: '100%'}"></el-input>
-        </el-form-item>
-        <el-form-item label="操作员名" prop="opername">
-            <el-input v-model="formData.opername" placeholder="请输入操作员名" clearable
-                      :style="{width: '100%'}"></el-input>
-        </el-form-item>
-        <el-form-item label="下载类别" prop="datatype">
-            <el-select v-model="formData.datatype" placeholder="请选择下载类别类别" clearable :style="{width: '100%'}">
-                <el-option v-for="(item, index) in datatypeOptions" :key="index" :label="item.label"
-                           :value="item.value" :disabled="item.disabled"></el-option>
-            </el-select>
-        </el-form-item>
-
-        <el-form-item label="版本号" prop="verno">
-            <el-input v-model="formData.verno" placeholder="请输入版本号" clearable :style="{width: '100%'}">
-            </el-input>
-        </el-form-item>
-
-        <el-form-item label="循环下载" prop="iscirculate" required>
-            <el-switch v-model="formData.iscirculate" active-text="是" inactive-text="否" :active-value='1'
-                       :inactive-value='0' inactive-color="#EBEEF5" active-color="#409eff"></el-switch>
-        </el-form-item>
-
-        <el-form-item size="large">
-            <el-button type="primary" icon="el-icon-search" @click="querySiCatalog()" size="medium">查询</el-button>
-            <el-button type="primary" icon="el-icon-download" @click="downLoadSiCatalog()" size="medium">下载</el-button>
-            <el-button @click="resetForm('formData')">重置</el-button>
-        </el-form-item>
-    </el-form>
-    <!--表格信息-->
-    <el-row :gutter="20" style="background-color: aliceblue;">
-        <el-col :span="20">
-            <div class="grid-content bg-purple">
-                【医疗服务项目1305】下载初始版本号:第一次传F001_19970101000000_C这个就是最小的来下载，F001是国家诊疗服务信息，F002是地方
-            </div>
-        </el-col>
-    </el-row>
-    <el-table
-            :data="tableData"
-            height=50vh
-            border
-            style="width: 100%;">
-        <el-table-column
-                prop="file_qury_no"
-                label="文件查询号"
-                width="450">
-        </el-table-column>
-        <el-table-column
-                prop="filename"
-                label="文件名"
-                width="300">
-        </el-table-column>
-        <el-table-column
-                prop="dld_end_time"
-                width="180"
-                label="下载截止日期">
-        </el-table-column>
-        <el-table-column
-                prop="data_cnt"
-                width="120"
-                label="数据量">
-        </el-table-column>
-        <el-table-column
-                prop="newverno"
-                width="200"
-                label="新版本号">
-        </el-table-column>
-        <el-table-column
-                label="操作"
-                width="100">
-            <template slot-scope="scope">
-                <el-button @click="handleDownLoadClick(scope.row)"
-                           type="primary" icon="el-icon-download" size="small">下载
-                </el-button>
-            </template>
-        </el-table-column>
-    </el-table>
+    <h1 style="background-color: #409EFF;text-align: center;">字典管理</h1>
+    <div>
+        <el-form :inline="true" class="demo-form-inline">
+            <el-form-item label="字典类别">
+                <el-select v-model="dictType" clearable  placeholder="选择字典类型">
+                    <el-option  v-for="item in dicTypeList"
+                                :key="item.dictId"
+                                :label="item.dictName"
+                                :value="item.dictType">
+                    </el-option>
+                </el-select>
+                <el-form-item label="字典码值">
+                    <el-input v-model="dictCode"></el-input>
+                </el-form-item>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary"  @click="btnQuery">查询</el-button>
+                <el-button type="primary" @click="btnAdd">添加</el-button>
+       </el-form-item>
+        </el-form>
+        <!--数据表格--->
+        <template>
+            <el-table
+                    ref="multipleTable"
+                    :data="dicList"
+                    size="mini"
+                    border
+                    @selection-change="handleSelectionChange">
+                style="width: 100%">
+                <el-table-column
+                        type="selection"
+                        width="55">
+                </el-table-column>
+                <el-table-column
+                        prop="dictId"
+                        label="字典ID"
+                        width="120">
+                </el-table-column>
+                <el-table-column
+                        prop="dictType"
+                        label="字典类别"
+                        width="150">
+                </el-table-column>
+                <el-table-column
+                        prop="dictCode"
+                        label="字典码值"
+                        width="100">
+                </el-table-column>
+                <el-table-column
+                        prop="dictName"
+                        label="字典码值名称"
+                        width="120">
+                </el-table-column>
+                <el-table-column
+                        label="状态"
+                        width="100">
+                    <template slot-scope="scope">
+                        <el-switch
+                                v-model="scope.row.dictStatus"
+                                active-value="1"
+                                inactive-value="0"
+                                active-color="#13ce66"
+                                inactive-color="#ff4949">
+                        </el-switch>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        label="操作"
+                        width="200px"
+                >
+                    <template slot-scope="scope">
+                        <el-button
+                                size="mini"
+                                type="primary"
+                                @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                        <el-button
+                                size="mini"
+                                type="danger"
+                                @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <el-pagination
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                    :current-page="currentPage"
+                    :page-sizes="[10, 20, 50, 100]"
+                    :page-size="pageSize"
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="total">
+            </el-pagination>
+        </template>
+        <!--添加对象-->
+        <el-dialog
+                title="添加"
+                :visible.sync="centerDialogVisible"
+                width="30%"
+                center>
+            <el-form ref="SysDicData" :model="SysDicData" label-width="80px">
+                <el-form-item label="字典类别">
+                    <el-select v-model="SysDicData.dictType"  clearable placeholder="请选择字典类别">
+                        <el-option v-for="item in dicTypeList"  :key="item.dictId"
+                                   :label="item.dictName"
+                                   :value="item.dictType"></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="字典码值">
+                    <el-input v-model="SysDicData.dictCode"></el-input>
+                </el-form-item>
+                <el-form-item label="字典名称">
+                    <el-input v-model="SysDicData.dictName"></el-input>
+                </el-form-item>
+                <el-form-item label="字典状态">
+                    <el-input v-model="SysDicData.dictStatus"></el-input>
+                </el-form-item>
+                <el-form-item label="父级字典">
+                    <el-input v-model="SysDicData.dictParent"></el-input>
+                </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                    <el-button @click="Cancel">取 消</el-button>
+                    <el-button type="primary" @click="submit">确 定</el-button>
+                </span>
+        </el-dialog>
+    </div>
 </div>
 </body>
 </html>
 <script>
     new Vue({
         el: "#app",
+        //数据
         data() {
             return {
-                formData: {
-                    nsiorgcode: 'H90000000566',
-                    nsiorgname: '测试医院',
-                    servrurl: 'http://218.206.51.198:8800/cydomain.test/feedthrough',
-                    infosyscode: 'infosys0020',
-                    infosyssign: 'fa543670b3684df98f5ba5bbdb9021ce',
-                    mdtrtarea_admvs: '530581',
-                    datatype: 1301,
-                    verno: '1',
-                    iscirculate: 0,
-                    filename: undefined,
-                    file_qury_no: undefined,
-                    opercode: "001",
-                    opername: "机构管理员",
-                    infno: undefined,
-                    signno: '12312',
-                },
-                tableData: [],
-                rules: {
-                    nsiorgcode: [{
-                        required: true,
-                        message: '输入国家机构码国家机构码',
-                        trigger: 'blur'
-                    }],
-                    nsiorgname: [{
-                        required: true,
-                        message: '输入国家机构码国家机构名称',
-                        trigger: 'blur'
-                    }],
-                    opercode: [{
-                        required: true,
-                        message: '输入操作员编码',
-                        trigger: 'blur'
-                    }],
-                    opername: [{
-                        required: true,
-                        message: '输入操作员名称',
-                        trigger: 'blur'
-                    }],
-                    servrurl: [{
-                        required: true,
-                        message: '输入医保请求地址',
-                        trigger: 'blur'
-                    }],
-                    infosyscode: [{
-                        required: true,
-                        message: '输入授权码',
-                        trigger: 'blur'
-                    }],
-                    infosyssign: [{
-                        required: true,
-                        message: '输入授权识别码',
-                        trigger: 'blur'
-                    }],
-                    mdtrtarea_admvs: [{
-                        required: true,
-                        message: '请输入统筹区码',
-                        trigger: 'blur'
-                    }],
-                    datatype: [{
-                        required: true,
-                        message: '请选择下载类别类别',
-                        trigger: 'change'
-                    }],
-                    verno: [{
-                        required: true,
-                        message: '请输入版本号',
-                        trigger: 'blur'
-                    }],
-                },
-                datatypeOptions: [{
-                    "label": "西药中成药",
-                    "value": 1301
-                }, {
-                    "label": "中药饮片",
-                    "value": 1302
-                }, {
-                    "label": "机构制剂",
-                    "value": 1303
-                }, {
-                    "label": "医疗服务项目",
-                    "value": 1305
-                }, {
-                    "label": "医用耗材",
-                    "value": 1306
-                }, {
-                    "label": "疾病与诊断",
-                    "value": 1307
-                }, {
-                    "label": "手术操作",
-                    "value": 1308
-                }, {
-                    "label": "门诊慢特病种",
-                    "value": 1309
-                }, {
-                    "label": "按病种付费",
-                    "value": 1310
-                }, {
-                    "label": "日间手术",
-                    "value": 1311
-                }, {
-                    "label": "肿瘤形态学",
-                    "value": 1313
-                }, {
-                    "label": "中医诊断",
-                    "value": 1314
-                }, {
-                    "label": "中医症候",
-                    "value": 1315
-                }],
+                dicTypeList:[
+                    {
+                        "dictId":1,
+                        "dictName":"性别",
+                        "dictType":"1"
+                    },
+                    {
+                        "dictId":2,
+                        "dictName":"民族",
+                        "dictType":"2"
+                    },
+                    {
+                        "dictId":3,
+                        "dictName":"婚姻",
+                        "dictType":"3"
+                    }
+                ],
+                dicList:[],
+                options:[],
+                dictType:"", //字典类型
+                dictCode:"", //字典码值
+                centerDialogVisible:false,
+                SysDicData:{},
+                diagTitle:"",
+                formLabelWidth: '120px',
+                multipleSelection: [],
+                currentPage:1,
+                pageSize:10,
+                total:0,
+                dialogImportVisible:false
             }
         },
-        computed: {},
-        watch: {},
+        //创建之前
         created() {
+
         },
+        //初始化加载数据
         mounted() {
+            //获取字典列表
+            this.getDicList(this.currentPage,this.pageSize,{"dictType":"","dictCode":""})
         },
         methods: {
-            //查询医保目录
-            querySiCatalog() {
-                this.$refs['formData'].validate(valid => {
-                    if (!valid) return;
-                    this.formData.infno = this.formData.datatype;
-                    console.log(this.formData)
-
-                    // TODO 查询
-                    axios.post("/queryNsiCataLog", this.formData).then((res => {
-                        console.log(res.data)
-
+            //页数大小改变
+            handleSizeChange(pagesize){
+                this.pageSize = pagesize
+                this.getDicList(this.currentPage,this.pageSize,{"dictType":""})
+            },
+            //处理当前页变化
+            handleCurrentChange(CurrentChange){
+                this.currentPage = CurrentChange
+                this.getDicList(this.currentPage,this.pageSize,{"dictType":""})
+            },
+            //多选
+            handleSelectionChange(selection){
+               this.multipleSelection = selection;
+            },
+            //编辑数据
+            handleEdit(index, row) {
+                //数据赋值
+                this.SysDicData = row;
+                this.centerDialogVisible = true
+                this.diagTitle = "修改字典"
+            },
+            //删除数据
+            handleDelete(index, row) {
+                this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    //删除字典
+                    axios.delete("/springboot/dict/removeDictById/"+row.dictId).then((res => {
                         this.$notify({
-                            title: res.status === 200 && res.data.infcode === 0 ? "查询成功" : "查询失败",
-                            message: res.data.infcode === 0 ? "" : (res.msg == undefined ? "" : res.msg) + res.data.err_msg,
-                            type: res.status === 200 && res.data.infcode === 0 ? "success" : "error"
+                            title: res.data.code === 200  ? "修改成功" : "修改失败",
+                            message: res.data.msg,
+                            type: res.data.code === 200  ? "success" : "error"
                         });
                         //绑定表格数据
-                        if (res.data.infcode === 0) {
-                            //绑定不上数据，重新构造
-                            var temprow = {
-                                data_cnt: res.data.output.data_cnt,
-                                dld_endtime: res.data.output.dld_endtime,
-                                file_qury_no: res.data.output.file_qury_no,
-                                filename: res.data.output.filename
-                            }
-                            this.tableData.push(res.data.output);
-                            //判断是否循环下载
-                            if (this.formData.iscirculate === 1) {
-                                //调用下载
-                                this.handleDownLoadClick(temprow);
-                            }
+                        if (res.data.code === 200) {
+                            //调用获取列表
+                            this.btnQuery();
                         }
-                    }))
+                    }));
+
+                }).then((response) => {
+                    this.getDictList()
+                    this.$message.success("删除成功")
+                }).catch(error => {
+                    this.$message.info('取消删除')
+
                 })
             },
-            //处理点击下载
-            handleDownLoadClick(row) {
-                console.log(row);
-                // TODO 下载
-                this.formData.file_qury_no = row.file_qury_no;
-                this.formData.filename = row.filename;
-                this.formData.infno = '9102';
-                var input = this.formData;
-                console.log(input);
-                axios.post("/downNsiCataLog", input).then((res => {
+            //查询数据
+            btnQuery(){
+                this.getDicList(this.currentPage,this.pageSize,{"dictType":this.dictType,"dictCode":this.dictCode})
+            },
+            //添加字典
+            btnAdd(){
+                this.SysDicData = {}
+                this.centerDialogVisible = true;
+            },
+            Cancel(){
+                this.centerDialogVisible = false;
+                tihs.SysDicData = {}
+            },
+            //添加字典
+            submit(){
+                console.log(this.SysDicData)
+                //获取字典ID
+                if(this.SysDicData.dictId){
+                    //修改
+                    axios.put("/springboot/dict/updateDictById", this.SysDicData).then((res => {
+                        this.$notify({
+                            title: res.data.code === 200  ? "修改成功" : "修改失败",
+                            message: res.data.msg,
+                            type: res.data.code === 200  ? "success" : "error"
+                        });
+                        //绑定表格数据
+                        if (res.data.code === 200) {
+                            this.centerDialogVisible = false
+                            this.SysDicData = {}
+                            //调用获取列表
+                            this.btnQuery();
+                        }else{
+
+                        }
+                    }));
+                }else{
+                    //新增
+                    axios.post("/springboot/dict/saveDict",this.SysDicData).then((res => {
+                    this.$notify({
+                            title: res.data.code === 200  ? "新增成功" : "新增失败",
+                            message: res.data.msg,
+                            type: res.data.code === 200  ? "success" : "error"
+                        });
+                        //绑定表格数据
+                        if (res.data.code == 200) {
+                            this.centerDialogVisible = false
+                             tihs.SysDicData = {}
+                             //调用获取列表
+                            this.getDicList(this.currentPage,this.pageSize,{"dictType":"","dictCode":""})
+                        }
+                    }));
+                }
+            },
+
+
+            //获取字段数据
+            getDicList(currentPage,pageSize,params){
+                axios.post("/springboot/dict/getDictListByPage/"+currentPage+"/"+pageSize, params).then((res => {
                     console.log(res.data)
                     this.$notify({
-                        title: res.status === 200 && res.data.infcode === 0 ? "下载成功" : "下载失败",
-                        message: res.data.infcode === 0 ? "" : res.data.err_msg,
-                        type: res.status === 200 && res.data.infcode === 0 ? "success" : "error"
+                        title: res.data.code === 200  ? "成功" : "失败",
+                        message: res.data.msg,
+                        type: res.data.code === 200  ? "success" : "error"
                     });
                     //绑定表格数据
-                    if (res.data.infcode === 0) {
-                        //解析文件
-                        this.getdownNsiCataLogInfo(row, input);
-
+                    if (res.data.code === 200) {
+                        this.dicList = res.data.data.records
+                        this.total = res.data.data.total
+                        this.currentPage = res.data.data.pages
+                        this.pageSize= res.data.data.size
                     }
                 }));
-            },
-            //获取文件信息
-            getdownNsiCataLogInfo(row, input) {
-                axios.post("/getdownNsiCataLogInfo", input).then((res => {
-                    console.log(res.data)
-                    this.$notify({
-                        title: res.status === 200 && res.data.infcode === 0 ? "解析文件成功" : "解析文件失败",
-                        message: res.data.infcode === 0 ? "" : res.data.err_msg,
-                        type: res.status === 200 && res.data.infcode === 0 ? "success" : "error"
-                    });
-                    if (res.data.infcode === 0) {
-                        row.data_cnt = res.data.count;
-                        row.newverno = res.data.versionno;
-                        //表单的版本号也更新
-                        this.formData.verno = res.data.versionno;
-                        //判断是否循环下载
-                        if (this.formData.iscirculate === 1) {
-                            //再次调用查询
-                            this.querySiCatalog();
-                        }
-                    }
-                }));
-            },
-            //下载医保目录
-            downLoadSiCatalog(formName) {
-
-            },
-            //重置表单
-            resetForm(formName) {
-                this.$refs[formName].resetFields()
-            },
+            }
         }
+
     });
 </script>
 <style scoped>
