@@ -1,0 +1,22 @@
+server:
+  port: 8019
+#配置应用的名字
+spring:
+  application:
+    name: SpringbootRedisApplication
+  #配置redis
+  redis:
+    host: 192.168.5.130
+    database: 0  #配置数据库0
+    port: 6379 #端口
+    #password:
+    #配置连接池
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1 #ms
+  #指定session的存储方式
+  session:
+    store-type: redis
