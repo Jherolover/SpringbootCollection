@@ -5,91 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e8a99e2-70f7-4fda-9afd-01275db25dd3" name="Changes" comment="Springboot整合easyExcel代码提交。">
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/entity/ColumnEntityBak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/css/fonts/element-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/css/fonts/element-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/js/axios.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/js/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/cache/DataCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/entity/TableEntityVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/enums/FileTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/listener/ExcelListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/mapper/ColumnEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/mapper/TableEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/java/com/elite/springboot/SpringbootRedisApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/java/com/elite/springboot/config/SessionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/java/com/elite/springboot/controller/RedisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/java/com/elite/springboot/controller/SessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/java/com/elite/springboot/service/RedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/java/com/elite/springboot/service/impl/RedisServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Springboot11Redis/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot01HelloWord/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot01HelloWord/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot01HelloWord/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot01HelloWord/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot02Configuration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot02Configuration/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/SpringbootConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/SpringbootConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/controller/ConfigurationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/controller/ConfigurationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/entity/PropertyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/entity/PropertyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/entity/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot02Configuration/src/main/java/com/elite/springboot/entity/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot02Configuration/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot02Configuration/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/Common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/Common/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/SpringbootJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/SpringbootJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/controller/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/src/main/java/com/elite/springboot/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot03JSON/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot03JSON/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/SpringbootExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/SpringbootExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/common/ErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/common/ErrorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/common/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/controller/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/controller/ExceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/exception/GlobalExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/exception/GlobalExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/exception/MyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/java/com/elite/springboot/exception/MyException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot04UnifiedExecetionHandle/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot05DataAccessJPA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot05DataAccessJPA/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java/com/elite/springboot/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java/com/elite/springboot/Dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java/com/elite/springboot/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java/com/elite/springboot/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java/com/elite/springboot/SpringbootJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/java/com/elite/springboot/SpringbootJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot05DataAccessJPA/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/SpringbootMybatisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/SpringbootMybatisApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/config/DruidConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/mapper/OrderAnnotationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/mapper/OrderAnnotationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/java/com/elite/springboot/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/test/java/com/elite/springboot/AppAnnotationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/test/java/com/elite/springboot/AppAnnotationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot06DataAccessMybatis/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/SpringbootMybatisPlusApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/SpringbootMybatisPlusApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/EnumCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/EnumCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/common/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/java/com/elite/springboot/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot07DataAccessMybatisPlus/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/SpringbootSwaggerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/SpringbootSwaggerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/codegene/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/codegene/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/common/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/config/Swagger2Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/java/com/elite/springboot/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot08Swagger/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot08Swagger/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/SpringbootVueApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/SpringbootVueApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/controller/DictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/controller/DictController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/entity/Dict.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/java/com/elite/springboot/entity/Dict.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot09Vue/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot09Vue/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/SpringbootEasyExcelApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/SpringbootEasyExcelApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/controller/DataExportImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/controller/DataExportImportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/entity/ColumnEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/entity/ColumnEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/entity/ColumnTypeConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/entity/ColumnTypeConstant.java" afterDir="false" />
@@ -97,9 +33,8 @@
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/listener/ColumnListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/listener/ColumnListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/utils/CreateTableHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/utils/CreateTableHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/utils/ExcelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/java/com/elite/springboot/utils/ExcelUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Springboot10EasyExcel/src/test/java/com/elite/springboot/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Springboot10EasyExcel/src/test/java/com/elite/springboot/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringbootCollection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringbootCollection.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,13 +67,16 @@
     </option>
   </component>
   <component name="ProjectId" id="2DRH1J6UB6reOY0Qgcxkb13hYQW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -148,12 +86,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/devproject/devcode/code/SpringbootCollection/Springboot10EasyExcel/src/main/resources",
+    "last_opened_file_path": "D:/devproject/devcode/kettle/kettleDemo",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "Settings.JavaScript",
-    "spring.configuration.checksum": "2585d810a809f86860876b09cc50bd25"
+    "spring.configuration.checksum": "c61cdbae7ee9f8ad0c4c6fe99323bdbc"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -180,7 +118,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootEasyExcelApplication">
+  <component name="RunManager" selected="Spring Boot.SpringbootRedisApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.elite.springboot.codegene.CodeGenerator" />
       <module name="Springboot09Vue" />
@@ -194,46 +132,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.elite.springboot.codegene.CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.elite.springboot.codegene.CodeGenerator" />
-      <module name="Springboot08Swagger" />
+    <configuration name="AppTest.geneSQL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springboot10EasyExcel" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.elite.springboot.exception.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.GetOrderList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Springboot07DataAccessMybatisPlus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.elite.springboot.utils.*" />
+          <option name="PATTERN" value="com.elite.springboot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.elite.springboot" />
       <option name="MAIN_CLASS_NAME" value="com.elite.springboot.AppTest" />
-      <option name="METHOD_NAME" value="GetOrderList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.SaveOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Springboot07DataAccessMybatisPlus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.elite.springboot.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.elite.springboot" />
-      <option name="MAIN_CLASS_NAME" value="com.elite.springboot.AppTest" />
-      <option name="METHOD_NAME" value="SaveOrder" />
+      <option name="METHOD_NAME" value="geneSQL" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -250,6 +159,22 @@
       <option name="PACKAGE_NAME" value="com.elite.springboot" />
       <option name="MAIN_CLASS_NAME" value="com.elite.springboot.AppTest" />
       <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Springboot10EasyExcel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.elite.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.elite.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.elite.springboot.AppTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -318,6 +243,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringbootRedisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" />
+      <module name="Springboot11Redis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.elite.springboot.SpringbootRedisApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.elite.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringbootSwaggerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Springboot09Vue" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.elite.springboot.SpringbootVueApplication" />
@@ -327,11 +266,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringbootRedisApplication" />
+        <item itemvalue="JUnit.AppTest.geneSQL" />
         <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
+        <item itemvalue="JUnit.AppTest.test" />
         <item itemvalue="Application.CodeGenerator" />
-        <item itemvalue="Application.com.elite.springboot.codegene.CodeGenerator" />
-        <item itemvalue="JUnit.AppTest.SaveOrder" />
-        <item itemvalue="JUnit.AppTest.GetOrderList" />
       </list>
     </recent_temporary>
   </component>
@@ -356,8 +295,20 @@
       <workItem from="1661257118763" duration="22082000" />
       <workItem from="1661342557703" duration="7994000" />
       <workItem from="1661428713436" duration="6015000" />
-      <workItem from="1661687507947" duration="8785000" />
+      <workItem from="1661687507947" duration="9688000" />
+      <workItem from="1661737362779" duration="2232000" />
+      <workItem from="1661758284554" duration="32845000" />
+      <workItem from="1661904375451" duration="11523000" />
+      <workItem from="1661947808686" duration="3475000" />
     </task>
+    <task id="LOCAL-00001" summary="Springboot整合easyExcel代码提交。">
+      <created>1661696633452</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661696633453</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +330,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Springboot整合easyExcel代码提交。" />
     <option name="LAST_COMMIT_MESSAGE" value="Springboot整合easyExcel代码提交。" />
   </component>

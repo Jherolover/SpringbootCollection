@@ -20,6 +20,8 @@
     <file url="file://$PROJECT_DIR$/Springboot09Vue/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Springboot10EasyExcel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot11Redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot11Redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../../../devsoftware/apache-maven-3.8.2/locallib/org/springframework/boot/spring-boot-starter-parent/2.3.6.RELEASE/src/main/resources" charset="UTF-8" />
   </component>
 </project>

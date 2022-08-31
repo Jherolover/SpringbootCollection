@@ -16,6 +16,7 @@
         <module name="Springboot07DataAccessMybatisPlus" />
         <module name="Springboot10EasyExcel" />
         <module name="Springboot06DataAccessMybatis" />
+        <module name="Springboot11Redis" />
       </profile>
     </annotationProcessing>
   </component>
@@ -31,6 +32,7 @@
       <module name="Springboot08Swagger" options="-parameters" />
       <module name="Springboot09Vue" options="-parameters" />
       <module name="Springboot10EasyExcel" options="-parameters" />
+      <module name="Springboot11Redis" options="-parameters" />
     </option>
   </component>
 </project>
