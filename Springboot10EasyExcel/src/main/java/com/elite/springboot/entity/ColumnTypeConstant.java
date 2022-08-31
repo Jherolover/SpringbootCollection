@@ -13,6 +13,8 @@ public class ColumnTypeConstant {
     public static final String NUMBER="number";
     public static final String CHAR = "char";
     public static final String VARCHAR ="varchar";
+
+    public static final String VARCHAR2 ="varchar2";
     public static final String DATE = "date";
     public static final String DATE_TIME="datetime";
     public static final String TIME_STAMP = "timestamp";

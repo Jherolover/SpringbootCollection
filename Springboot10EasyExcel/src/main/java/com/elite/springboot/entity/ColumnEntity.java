@@ -15,11 +15,15 @@ import lombok.Value;
  * 列信息实体类
  */
 @Data
-@TableName("ColumnEntity")
+@TableName("`column_entity`")
 public class ColumnEntity {
     @TableId(value = "column_id", type = IdType.AUTO)
     @ExcelProperty(value="序号")
-    private String columnId;
+    private Integer columnId;
+    //表的ID
+    @ExcelProperty(value="表名ID")
+    @TableField("table_id")
+    private Integer tableId;
     //列名
     @ExcelProperty(value="列名")
     @TableField("column_name")

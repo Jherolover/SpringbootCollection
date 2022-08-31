@@ -26,24 +26,56 @@
                 <el-button type="primary" icon="el-icon-upload2" @click="importData">上传excel</el-button>
             </el-form-item>
         </el-form>
-
+        <div style="color: #3a8ee6">生成的sql<div>
+        <el-form :inline="true"  class="demo-form-inline" label-position="center">
+            <el-input type="textarea"
+                    :rows="6"
+                      :autosize="{minRows: 2, maxRows: 10}"
+                    v-model="textarea">
+            </el-input>
+        </el-form>
         <!---导入弹框-->
-        <el-dialog title="上传Excel:上传前先下载模板进行格式调整" :visible.sync="dialogImportVisible" width="480px">
+        <el-dialog title="上传Excel:上传前先下载模板进行格式调整" :visible.sync="dialogImportVisible" width="800px">
+            <!--文件参数相关的设置-->
+            <el-form :inline="true" :model="uploadFromData"  ref="formData" :rules="rules" class="demo-form-inline" size="medium" label-width="100px">
+                <el-form-item label="数据库名" prop="dbName">
+                    <el-input v-model="uploadFromData.dbName" placeholder="数据库名" clearable
+                              :style="{width: '100%'}"></el-input>
+                </el-form-item>
+                <el-form-item label="数据库类型" prop="dbType">
+                    <el-select v-model="uploadFromData.dbType" placeholder="输入类型">
+                        <el-option label="mysql" value="mysql"></el-option>
+                        <el-option label="oracle" value="oracle"></el-option>
+                        <el-option label="mssql" value="mssql"></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="schema">
+                    <el-input v-model="uploadFromData.schema" placeholder="数据库schema" clearable
+                              :style="{width: '100%'}"></el-input>
+                </el-form-item>
+                <el-form-item label="sheet个数" prop="sheetNum">
+                    <el-input v-model.number="uploadFromData.sheetNum" placeholder="sheet个数" clearable
+                              :style="{width: '100%'}"></el-input>
+                </el-form-item>
+            </el-form>
             <!--选择框-->
             <el-form label-position="center" label-width="170px">
                 <el-form-item label="文件">
                     <el-upload
                             :multiple="false"
+                            :data="uploadFromData"
+                            :before-upload="beforeUpload"
+                            list-type="picture"
                             :on-success="onUploadSuccess"
                             :action="'http://localhost:8017/uploadExcel'"
                             class="upload-demo">
                         <el-button size="small" type="primary">点击上传</el-button>
-                        <div slot="tip" class="el-upload__tip">只能上传xls文件，且不超过500kb</div>
+                        <span slot="tip" class="el-upload__tip" style="color: red;">只能上传xls/xlsx/csv文件，且不超过1M</span>
                     </el-upload>
                 </el-form-item>
             </el-form>
             <div slot="footer" class="dialog-footer" style="text-align: center">
-                <el-button type="info" @click="dialogImportVisible = false">取消</el-button>
+                <el-button type="info" @click="cancelUpload">取消</el-button>
             </div>
         </el-dialog>
     </div>
@@ -56,7 +88,26 @@
         //数据
         data() {
             return {
-                dialogImportVisible:false //导入上传文本框
+                dialogImportVisible:false,//导入上传文本框
+                uploadFromData:{   //上传的表单参数
+                    dbName:"",//数据库名字
+                    dbType:"oracle" ,//默认是oracle数据库
+                    schema:"",//数据库schema
+                    sheetNum:1 //excel sheet页
+                },
+                textarea:"",
+                rules: {
+                    dbName: [
+                        { required: true, message: '请输入数据库名字', trigger: 'blur' }
+                    ],
+                    dbType: [
+                        { required: true, message: '请选择数据库类型', trigger: 'change' }
+                    ],
+                    sheetNum: [
+                        { required: true, message: 'excel中sheet个数不能为空且', trigger: 'blur' },
+                        { type: 'number', message: 'sheet个数必须为数字', trigger: ['blur', 'change'] }
+                    ]
+                }
             }
         },
         //创建之前
@@ -76,10 +127,38 @@
             downloadTemplate(){
                 window.open("http://localhost:8017/downLoadExcelTemplate")
             },
+            //取消上传
+            cancelUpload(){
+                this.dialogImportVisible = false
+                //重置表单
+                this.resetForm("formData");
+
+            },
+            //重置表单
+            resetForm(formName) {
+                this.$refs[formName].resetFields();
+            },
+            //上传点击上传前进行校验是否填写信息完整‘
+            beforeUpload(){
+                let validFlag = true;
+                //验证表单
+                this.$refs["formData"].validate((valid) => {
+                    if (valid) {
+                        validFlag = true;
+                    } else {
+                        validFlag = false;
+                        this.$message.error("请填写完整的数据库信息！")
+                    }
+                });
+                return validFlag;
+
+            },
             //加载成功
             onUploadSuccess(response, file) {
-                this.$message.info('上传成功')
+                this.$message( {type:"success",message:'上传成功'})
+
                 this.dialogImportVisible = false
+                this.textarea = response;
             }
         }
 
