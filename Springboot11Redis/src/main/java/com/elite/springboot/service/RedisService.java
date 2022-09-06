@@ -1,7 +1,5 @@
 package com.elite.springboot.service;
 
-import org.springframework.stereotype.Service;
-
 /**
  * 定义访问redis的接口类
  *

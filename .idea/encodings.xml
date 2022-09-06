@@ -22,6 +22,18 @@
     <file url="file://$PROJECT_DIR$/Springboot10EasyExcel/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Springboot11Redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Springboot11Redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot12Dubbo/OrderConsumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot12Dubbo/OrderProvider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot12Dubbo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot12Dubbo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot13ElasticSearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot13ElasticSearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot14RocketMq/RocketMqOrderConsumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot14RocketMq/RocketMqOrderProvider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot14RocketMq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot14RocketMq/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot15Quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Springboot15Quartz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../../../devsoftware/apache-maven-3.8.2/locallib/org/springframework/boot/spring-boot-starter-parent/2.3.6.RELEASE/src/main/resources" charset="UTF-8" />
   </component>
 </project>

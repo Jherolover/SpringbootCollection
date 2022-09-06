@@ -1,0 +1,10 @@
+server:
+  port: 8021
+#配置应用的名字
+spring:
+  application:
+    name: SpringbootElasticSearchApplication
+##配置es ip和端口
+elasticsearch:
+  host: 192.168.5.130
+  port: 9200

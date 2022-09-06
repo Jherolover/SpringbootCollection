@@ -1,0 +1,11 @@
+server:
+  port: 8022
+#应用名字
+spring:
+  application:
+    name: RocketMqOrderProvider
+#rocketmq配置
+rocketmq:
+  name-server: 192.168.5.130:9876
+  producer:
+    group: order-producer-group

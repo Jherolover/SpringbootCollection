@@ -1,0 +1,19 @@
+server:
+  port: 8020
+#应用的名字
+spring:
+  application:
+    name: OrderProviderApplication
+dubbo:
+  application:
+    name: order-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: zk-registry
+    address: zookeeper://192.168.5.130:2181?blockUntilConnectedWait=100000&timeout=100000 #需要加后边的串，不然容易报连接失败
+  config-center:
+    address: zookeeper://192.168.5.130:2181
+  metadata-report:
+    address: zookeeper://192.168.5.130:2181
